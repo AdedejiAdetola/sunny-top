@@ -1,0 +1,130 @@
+$greenBlue: linear-gradient(to bottom right, #2af598, #009efd); 
+$purpleBlue: linear-gradient(to bottom right, #5050ff, #fd7777);
+$white: #fff;
+$purple: #282f59;
+$ash: #7c7c7c;
+$orange: #ff4500;
+$footer: #f2f6f8;
+
+@mixin button($color, $hover){
+    text-decoration: none;
+    font-weight: 600;
+    padding: 20px 30px;
+    background: $color;
+    color: white;
+    border-radius: 5px; 
+    border: none;
+    cursor: pointer;
+    &:hover{
+        background: $hover;
+    }
+}
+
+@mixin title{
+    font-size: 5rem;
+    font-weight: 900;
+    color: $purple;
+    margin-bottom: 2rem;
+}
+
+@mixin content{
+    color: $ash;
+    line-height: 3rem;
+    font-size: 2rem;
+    text-align: justify;
+}
+
+header{
+    background: url("../../../images/page-title.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+    
+}
+
+.header{
+    &_body{
+        background: rgba(0,0,0,0.6);
+        margin: 0;
+        padding-left: 2rem;
+    }
+
+    &_culture-title{
+        text-transform: capitalize;
+        font-size: 5rem;
+        margin-bottom: 0;
+    }
+}
+
+.nav_right{
+    button{
+        @include button($purpleBlue, $greenBlue);
+        padding: 1.5rem 2.5rem;
+    }
+}
+
+.servicePage{
+    background-color: $footer;
+    padding: 10rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &-title{
+        @include title;
+        text-transform: capitalize;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    &-text{
+        @include content;
+        text-align: center;
+        width: 80%;
+    }
+
+    &_container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &-service{
+        margin: 1.5rem;
+        width: max-content;
+        padding: 2rem;
+        background-color: $white;
+        border-radius: 2rem;
+
+        &-title{
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: $ash;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &_image{
+        
+
+        img{
+            width:32rem;
+            border-bottom: 10px solid $orange;
+        }
+    }
+
+    &_content{
+        width:32rem;
+        @include content;
+        font-size: 1.7rem;
+    }
+}
+
+@media only screen and (max-width: 740px){
+    .slide{
+        height:60vh;
+    }
+}

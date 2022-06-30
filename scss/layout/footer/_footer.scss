@@ -1,0 +1,98 @@
+.footer{
+    background-color: $footer;
+    padding: 3rem 0;
+    &_container{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+
+    &_name{
+        width: 40%;
+        .title{
+            @include title;
+        }
+
+        .content{
+            @include content;
+        }
+    }
+
+
+    &_contact, &_about, &_services{
+        .title{
+            @include title;
+            font-size: 2.5rem;
+        }
+
+        .body{
+            @include content;
+            margin-bottom: 2rem;
+        }
+    }
+
+    hr{
+        width: 70%;
+        margin: auto;
+    }
+    &_container2{
+        display:flex;
+        justify-content: space-evenly;
+        margin-top: 3rem;
+        @include content;
+        font-weight: 600;
+    }
+}
+
+@media only screen and (max-width: 1070px) {
+    .footer{
+        &_services{
+            display: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 860px) {
+    .footer{
+        &_about{
+            display: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 650px){
+    .footer{
+
+        &_container{
+            flex-direction: column;
+        }
+        &_name{
+            .content{
+                display: none;
+            }
+        }
+
+        &_contact{
+            flex-wrap: wrap;
+            .title{
+                display:none;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 550px){
+    .footer{
+        &_container{
+            .title{
+                font-size: 2.5rem;
+            }
+        }
+
+        &_container2{
+            font-size: 1.5rem;
+        }
+    }
+}

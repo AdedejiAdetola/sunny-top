@@ -1,0 +1,110 @@
+.service{
+    &_cover{
+        padding: 10rem 5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    &_container{
+        &-grid{
+            width: 300px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px ;
+            margin-bottom: 5rem;
+        }
+        &-text{
+            text-transform: capitalize;
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+    }
+
+    &_container2{
+        width: 50%;
+        &-title {
+            @include title;
+        }
+
+        &-content1{
+            @include content; 
+            margin-bottom: 3rem;
+        }
+
+        &-content2{
+            @include content;
+            font-weight: 800;
+            margin-bottom: 5rem;
+        }
+        
+        button{
+            @include button($purpleBlue, $greenBlue);
+            a{
+                text-decoration: none;
+                color:$white;
+            }
+        }
+    }
+}
+.s-one{
+    background: $greenBlue;
+}
+
+.s-two{
+    background: $purpleBlue;
+}
+
+.s-three{
+    background: $orangish;
+}
+
+.s-four{
+    background: $bluish;
+}
+
+.img{
+    img{
+        width: 50px;
+    }
+    
+}
+
+//RESPONSIVE
+@media only screen and (max-width: 795px) {
+    .service{
+        &_cover{
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &_container2{
+            margin-bottom: 3rem;
+            text-align: center;
+            width: 100%;
+        }
+
+        &_container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .service{
+        &_container2{
+            &-title{
+                font-size: 4rem;
+            }
+        }
+    }
+}
+
+

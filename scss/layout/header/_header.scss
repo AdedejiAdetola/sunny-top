@@ -1,0 +1,124 @@
+header{
+    background: url("../../../images/background1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: $white;
+}
+
+.header{
+    &_body{
+        display: flex;
+        height:inherit;
+        width: 100%;
+        position: absolute;
+        top:0;
+        left:0;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+    }
+
+    &_culture{
+        width:50%;
+        &-title{
+            font-size: 8rem;
+            text-transform: uppercase;
+            font-weight: 900;
+            margin-bottom: 2rem;
+        }
+
+        &-content{
+            font-size: 2rem;
+            .first{
+                font-weight: 900;
+                font-size: 2.5rem;
+                margin-bottom: 2rem;
+                color: $purple;
+            }
+
+            .second{
+                line-height: 3rem;
+                text-align: justify;
+                margin-bottom: 2.5rem;
+            }
+        }
+
+        button{
+            @include button($greenBlue, $purpleBlue);
+            text-transform: uppercase;
+
+            a{
+                text-decoration: none;
+                color: $white;
+            }
+        }
+    }
+
+    &_quote{
+        width:40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        p{
+            font-weight: 900;
+            font-size: 2.5rem;
+            margin-bottom: 7rem;
+            color: $purple
+        }
+
+        div input{
+            border: none;
+            border-bottom: 1px solid black;
+            margin-bottom: 3rem;
+        }
+    }
+
+    &_container{
+        background-color: $white;
+        padding: 5rem;
+        border-radius: 2rem;
+
+        .button{
+            @include button($greenBlue, $purpleBlue);
+            padding: 1rem 3rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 960px){
+    .header{
+        &_culture{
+            &-title{
+                font-size: 6rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 760px){
+    .header{
+        &_quote{
+            display: none;
+        }
+
+        &_culture{
+            width: 100%;
+            &-title{
+                text-align: center;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 440px){
+    .header{
+        &_culture{
+            &-title{
+                font-size: 4rem;
+            }
+        }
+    }
+}

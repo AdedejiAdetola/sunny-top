@@ -1,0 +1,102 @@
+@mixin button($color, $hover){
+    text-decoration: none;
+    font-weight: 600;
+    padding: 20px 30px;
+    background: $color;
+    color: white;
+    border-radius: 5px; 
+    border: none;
+    cursor: pointer;
+    &:hover{
+        background: $hover;
+    }
+}
+
+@mixin content{
+    color: $ash;
+    line-height: 3rem;
+    font-size: 2rem;
+    text-align: justify;
+}
+
+$greenBlue: linear-gradient(to bottom right, #2af598, #009efd); 
+$purpleBlue: linear-gradient(to bottom right, #5050ff, #fd7777);
+$ash: #7c7c7c;
+
+header{
+    background: url("../../../images/page-title.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+    
+}
+
+.header{
+    &_body{
+        background: rgba(0,0,0,0.6);
+        margin: 0;
+        padding-left: 2rem;
+    }
+
+    &_culture-title{
+        text-transform: capitalize;
+        font-size: 5rem;
+        margin-bottom: 0;
+    }
+}
+
+.nav_right{
+    button{
+        @include button($purpleBlue, $greenBlue);
+        padding: 1.5rem 2.5rem;
+    }
+}
+
+.culture_about{
+    display:flex;
+    justify-content: space-evenly;
+    padding: 5rem 5rem;
+    margin: auto;
+
+    &-happy, &-projects, &-employees{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .text{
+            margin-left: 1rem;
+            &1{
+                font-weight: 900;
+                font-size: 2rem;
+                margin-bottom: 0.5rem;
+            }
+
+            &2{
+                @include content;
+                text-transform: capitalize;
+            }
+        }
+    }
+}
+
+.team{
+    padding: 0;
+}
+
+@media only screen and (max-width: 740px){
+    .slide{
+        height:60vh;
+    }
+}
+
+@media only screen and (max-width: 840px){
+    .culture_about{
+        flex-direction: column;
+        width: 80%;
+        align-items: start;
+
+        &-happy, &-projects{
+            margin-bottom: 2rem;
+        }
+    }
+}

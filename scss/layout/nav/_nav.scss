@@ -1,0 +1,62 @@
+nav{
+    position: relative;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: $white;
+    button{
+        @include button($purpleBlue, $greenBlue);
+        padding: 1.5rem 2.5rem;
+        display: none;
+    }
+}
+
+.nav_right, .nav_left{
+    div, p{
+        margin: 1rem 1.5rem;
+
+        a{
+            text-decoration: none;
+            color: $white;
+        }
+    }
+
+    div:hover{
+        border-bottom: 2px solid red;
+    }
+}
+
+.nav_left{
+    p{
+        font-size: 2rem;
+        font-weight: 700;
+    }
+}
+
+.mobile-nav{
+    display: none;
+}
+
+
+@media only screen and (max-width: 760px){
+    .nav_right{
+        button{
+            display: block;
+        }
+    }
+}
+
+@media only screen and (max-width: 740px){
+    .mobile-nav{
+        display:block;
+    }
+    @include mobileNav;
+}

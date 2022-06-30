@@ -1,0 +1,69 @@
+.team{
+    padding: 5rem 0;
+    &-title{
+        @include title;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    &-content{
+        @include content;
+        text-align: center;
+    }
+
+    &_container{
+        background: $purpleBlue;
+        margin-top: 3rem;
+    }
+
+    &_cover{
+        display: flex;
+        justify-content: center;
+        padding: 10rem 5rem;
+        &-person{
+            width: 30rem;
+            background-color: whitesmoke;
+            border-radius: 1rem;
+            text-align: center;
+            margin: 2rem;
+            padding: 3rem;
+            img{
+                width: 100px;
+                border-radius: 50%;
+                margin-bottom: 5rem;
+            }
+
+            &--name{
+                margin-bottom: 5rem;
+                color: $orange;
+                font-size: 2.5rem;
+                font-weight: 600;
+            }
+
+            &--founder{
+                color: $ash;
+                font-weight: 900;
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+//RESPONSIVE
+@media only screen and (max-width: 720px){
+    .team{
+        &_cover{
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 450px){
+    .team{
+        &-title{
+            font-size: 4rem;
+        }
+    }
+}

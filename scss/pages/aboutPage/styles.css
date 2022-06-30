@@ -1,0 +1,104 @@
+header {
+  background: url("../../../images/page-title.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60vh;
+}
+
+.header_body {
+  background: rgba(0, 0, 0, 0.6);
+  margin: 0;
+  padding-left: 2rem;
+}
+
+.header_culture-title {
+  text-transform: capitalize;
+  font-size: 5rem;
+  margin-bottom: 0;
+}
+
+.nav_right button {
+  text-decoration: none;
+  font-weight: 600;
+  padding: 20px 30px;
+  background: -webkit-gradient(linear, left top, right bottom, from(#5050ff), to(#fd7777));
+  background: linear-gradient(to bottom right, #5050ff, #fd7777);
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  padding: 1.5rem 2.5rem;
+}
+
+.nav_right button:hover {
+  background: -webkit-gradient(linear, left top, right bottom, from(#2af598), to(#009efd));
+  background: linear-gradient(to bottom right, #2af598, #009efd);
+}
+
+.culture_about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 5rem 5rem;
+  margin: auto;
+}
+
+.culture_about-happy, .culture_about-projects, .culture_about-employees {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.culture_about-happy .text, .culture_about-projects .text, .culture_about-employees .text {
+  margin-left: 1rem;
+}
+
+.culture_about-happy .text1, .culture_about-projects .text1, .culture_about-employees .text1 {
+  font-weight: 900;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.culture_about-happy .text2, .culture_about-projects .text2, .culture_about-employees .text2 {
+  color: #7c7c7c;
+  line-height: 3rem;
+  font-size: 2rem;
+  text-align: justify;
+  text-transform: capitalize;
+}
+
+.team {
+  padding: 0;
+}
+
+@media only screen and (max-width: 740px) {
+  .slide {
+    height: 60vh;
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  .culture_about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 80%;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+  .culture_about-happy, .culture_about-projects {
+    margin-bottom: 2rem;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

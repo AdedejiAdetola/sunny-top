@@ -1,0 +1,47 @@
+header {
+  background: url("../../../images/page-title.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60vh;
+}
+
+.header_body {
+  background: rgba(0, 0, 0, 0.6);
+  margin: 0;
+  padding-left: 2rem;
+}
+
+.header_culture-title {
+  text-transform: capitalize;
+  font-size: 5rem;
+  margin-bottom: 0;
+}
+
+.nav_right button {
+  text-decoration: none;
+  font-weight: 600;
+  padding: 20px 30px;
+  background: -webkit-gradient(linear, left top, right bottom, from(#5050ff), to(#fd7777));
+  background: linear-gradient(to bottom right, #5050ff, #fd7777);
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  padding: 1.5rem 2.5rem;
+}
+
+.nav_right button:hover {
+  background: -webkit-gradient(linear, left top, right bottom, from(#2af598), to(#009efd));
+  background: linear-gradient(to bottom right, #2af598, #009efd);
+}
+
+.project_title, .project_text {
+  text-align: center;
+}
+
+@media only screen and (max-width: 740px) {
+  .slide {
+    height: 60vh;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
